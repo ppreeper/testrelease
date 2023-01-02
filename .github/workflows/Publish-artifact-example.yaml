@@ -30,3 +30,14 @@ jobs:
           removeArtifacts: true
           replacesArtifacts: true
           artifacts: downloads/*
+      - uses: sgpublic/delete-release-action@main      
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          release-drop: true
+          release-keep-count: 3
+          release-drop-tag: true
+          pre-release-drop: true
+          pre-release-keep-count: -1
+          pre-release-drop-tag: true
+          draft-drop: true
