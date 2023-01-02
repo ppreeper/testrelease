@@ -30,6 +30,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}          
         with:
-          tag_name: ${{ env.SHA }}
+          tag_name: latest
           target_commitish: ${{ github.sha }}
           files: downloads/*
