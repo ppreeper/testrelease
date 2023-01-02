@@ -23,11 +23,14 @@ jobs:
         with:
           name: assets-for-download
           path: downloads
+      - uses: benjlevesque/short-sha@v2.1
+        id: short-sha
+        with:
+          length: 6
       - name: Step 4 upload assets
         uses: softprops/action-gh-release@v0.1.15
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SHA12: ${GITHUB_SHA::12}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}          
         with:
-          tag_name: ${SHA12}
+          tag_name: ${{ env.SHA }}
           target_commitish: ${{ github.sha }}
