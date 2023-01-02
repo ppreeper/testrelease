@@ -31,14 +31,10 @@ jobs:
           removeArtifacts: true
           replacesArtifacts: true
           artifacts: downloads/*
-      - uses: sgpublic/delete-release-action@v1.0
+      - name: Delete Older Releases
+        uses: dev-drprasad/delete-older-releases@v0.2.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          release-drop: true
-          release-keep-count: 2
-          release-drop-tag: true
-          pre-release-drop: true
-          pre-release-keep-count: -1
-          pre-release-drop-tag: true
-          draft-drop: true
+          keep_latest: 3
+          delete_tags: true
