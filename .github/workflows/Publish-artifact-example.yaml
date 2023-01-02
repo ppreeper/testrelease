@@ -7,7 +7,13 @@ on:
 jobs:
   archive-build-artifacts:
     runs-on: ubuntu-latest
+    container:
+      image: asciidoctor/docker-asciidoctor
+      volumes:
+        - ${{ github.workspace }}:/documents
     steps:
+      - name: check out the repo
+        uses: actions/checkout@v2
       - name: Step 1 - Create a temporary artifact downloads folder
         run: mkdir downloads
       - name: Step 2 - Add artifacts to publish to the temp folder
