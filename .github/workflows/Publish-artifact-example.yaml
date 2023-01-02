@@ -25,6 +25,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}          
         with:
           name: latest
-          tag: latest
+          tag: ${{ sha.ENV }}
           makeLatest: true
+          removeArtifacts: true
+          replacesArtifacts: true
           artifacts: downloads/*
