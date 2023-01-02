@@ -1,3 +1,16 @@
-= test doc
+= sort order ascpects: the other order
+:toc:
 
-test doc
+== section 1 ddl
+
+=== Help Im a fish
+
+One day i became a fish.
+That was wierd.
+
+== Section 2 ddq
+
+=== Oh yeah
+
+I like kool-aid.
+And tacos too.

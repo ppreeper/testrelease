@@ -1,0 +1,10 @@
+= Book Title
+Author Name
+:doctype: book
+:toc:
+:imagesdir: images
+ifndef::ebook-format[:leveloffset: 1]
+
+include::book/chapter-one.adoc[]
+
+include::book/chapter-two.adoc[]
