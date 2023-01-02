@@ -32,4 +32,4 @@ jobs:
         with:
           tag_name: ${{ env.SHA }}
           target_commitish: ${{ github.sha }}
-          files: downloads
+          files: downloads/*
