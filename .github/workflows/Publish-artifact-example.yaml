@@ -27,7 +27,7 @@ jobs:
         uses: softprops/action-gh-release@v0.1.15
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SHA12: ${{ GITHUB_SHA::12 }}
+          SHA12: ${GITHUB_SHA::12}
         with:
-          tag_name: ${{ SHA12 }}
+          tag_name: $SHA12
           target_commitsh: ${{ github.sha }}
