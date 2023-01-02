@@ -30,4 +30,4 @@ jobs:
           SHA12: ${GITHUB_SHA::12}
         with:
           tag_name: $SHA12
-          target_commitsh: ${{ github.sha }}
+          target_commitish: ${{ github.sha }}
