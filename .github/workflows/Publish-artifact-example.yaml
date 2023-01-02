@@ -14,17 +14,8 @@ jobs:
     steps:
       - name: check out the repo
         uses: actions/checkout@v2
-      - name: Step 1 - Create a temporary artifact downloads folder
-        run: mkdir downloads
-      - name: Step 2 - Add artifacts to publish to the temp folder
-        run: |
-          cd downloads
-          echo 'alpha' > alpha.html
-          echo 'bravo' > bravo.html
-          echo 'charlie' > charlie.html
-          echo 'delta' > delta.html
-          echo 'echo' > echo.html
-          cd ..
+      - name: generate pdf
+        run: asciidoctor-pdf -a allow-uri-read -r asciidoctor-diagram *adoc
       - uses: benjlevesque/short-sha@v2.1
         id: short-sha
       - name: Create Release
@@ -37,7 +28,7 @@ jobs:
           makeLatest: true
           removeArtifacts: true
           replacesArtifacts: true
-          artifacts: downloads/*
+          artifacts: ${{ github.workspace }}/*pdf
       - name: Delete Older Releases
         uses: dev-drprasad/delete-older-releases@v0.2.1
         env:
