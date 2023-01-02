@@ -26,4 +26,5 @@ jobs:
         with:
           name: latest
           tag: latest
+          makeLatest: true
           artifacts: downloads/*
