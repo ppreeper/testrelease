@@ -16,7 +16,6 @@ jobs:
           echo 'alphaalpha' > alpha.html
           echo 'bravo' > bravo.html
           echo 'charlie' > charlie.html
-          echo 'delta' > delta.html
           cd ..
       - uses: benjlevesque/short-sha@v2.1
         id: short-sha
