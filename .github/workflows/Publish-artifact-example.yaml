@@ -25,5 +25,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}          
         with:
           name: latest
-          tag_name: ${{ env.SHA }}
           files: downloads/*
