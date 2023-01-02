@@ -30,7 +30,7 @@ jobs:
           makeLatest: true
           removeArtifacts: true
           replacesArtifacts: true
-          artifacts: "${{ github.workspace }}/*pdf,${{ github.workspace }}/*epub"
+          artifacts: ${{ github.workspace }}/*pdf,${{ github.workspace }}/*epub
       - name: Delete Older Releases
         uses: dev-drprasad/delete-older-releases@v0.2.1
         env:
