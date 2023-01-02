@@ -29,5 +29,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SHA12: ${GITHUB_SHA::12}
         with:
-          tag_name: ${{SHA12}}
+          tag_name: ${SHA12}
           target_commitish: ${{ github.sha }}
