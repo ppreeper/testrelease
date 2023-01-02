@@ -27,4 +27,4 @@ jobs:
         with:
           name: latest
           tag: ${{ env.SHA }}
-          files: downloads/*
+          artifacts: downloads/*
