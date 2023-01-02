@@ -30,7 +30,7 @@ jobs:
           removeArtifacts: true
           replacesArtifacts: true
           artifacts: downloads/*
-      - uses: sgpublic/delete-release-action@main      
+      - uses: sgpublic/delete-release-action@v1.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
