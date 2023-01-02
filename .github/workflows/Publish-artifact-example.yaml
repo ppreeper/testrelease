@@ -16,6 +16,8 @@ jobs:
         uses: actions/checkout@v2
       - name: generate pdf
         run: asciidoctor-pdf -a allow-uri-read -r asciidoctor-diagram *adoc
+      - name: generate epub3
+        run: asciidoctor-epub3 -a allow-uri-read -r asciidoctor-diagram *adoc
       - uses: benjlevesque/short-sha@v2.1
         id: short-sha
       - name: Create Release
