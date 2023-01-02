@@ -27,4 +27,5 @@ jobs:
         with:
           tag_name: latest
           target_commitish: ${{ github.sha }}
+          asset: merge
           files: downloads/*
